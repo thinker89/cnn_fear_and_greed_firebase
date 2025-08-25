@@ -1,15 +1,15 @@
 {
   "name": "functions",
   "scripts": {
+    "lint": "eslint \"src/**/*.ts\"",
     "build": "tsc",
-    "lint": "eslint --ext .ts .",
     "serve": "firebase emulators:start --only functions,firestore",
-    "shell": "firebase functions:shell",
-    "start": "npm run serve",
     "deploy": "firebase deploy --only functions,firestore:rules",
     "logs": "firebase functions:log"
-    },
-  "engines": { "node": "20" },
+  },
+  "engines": {
+    "node": "20"
+  },
   "main": "lib/index.js",
   "type": "commonjs",
   "dependencies": {
@@ -17,10 +17,11 @@
     "firebase-functions": "^5.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.40.0"
   },
   "private": true
 }
